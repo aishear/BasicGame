@@ -6,5 +6,6 @@ summon unit(s)
 summon magical item
 necromancer?
 stuns?
+summon wall of ice
 
 classes?
