@@ -1,0 +1,39 @@
+Actions:
+
+character actions:
+- move to a location
+- attack a location
+- use item
+- cast spell
+
+player actions:
+-  end turn
+
+
+
+
+movement:
+input:
+- coordinates
+- character id
+
+changed data:
+- position of character
+
+output:
+- valid move?
+
+
+
+attack:
+input:
+- character id (source)
+- character id (target)
+- weapon
+
+changed data:
+- health of target character
+
+output:
+- hit / miss
+- valid attack?

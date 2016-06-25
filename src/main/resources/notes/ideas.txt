@@ -1,0 +1,10 @@
+stamina system for actions?
+multiple attacks per turn?
+
+magic:
+summon unit(s)
+summon magical item
+necromancer?
+stuns?
+
+classes?

@@ -1,0 +1,40 @@
+Data:
+
+character:
+- name
+- health (max and current)
+- mana (max and current)
+- items (use slots?)
+- spells known
+- stats
+- race (modifies stats)
+- controller (player id / computer)
+
+stats:
+- physical resist
+- magic resist
+- agility
+- strength
+- magical talent
+- finesse (barbarian vs archer)
+
+arena:
+- positions of characters
+- positions of scenery
+- size of map
+
+weapon:
+- modifiers
+- range
+- weight?
+
+spell:
+- effect
+
+armor:
+- modifiers
+- weight?
+
+items:
+- effect
+- weight?
