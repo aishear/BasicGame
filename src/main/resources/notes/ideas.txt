@@ -9,3 +9,9 @@ stuns?
 summon wall of ice
 
 classes?
+
+
+equipment:
+allow dual wielding
+one handed + shield
+two handed weapon

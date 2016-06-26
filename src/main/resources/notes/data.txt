@@ -2,8 +2,6 @@ Data:
 
 character:
 - name
-- health (max and current)
-- mana (max and current)
 - items (use slots?)
 - spells known
 - stats
@@ -11,12 +9,16 @@ character:
 - controller (player id / computer)
 
 stats:
-- physical resist
-- magic resist
-- agility
-- strength
-- magical talent
-- finesse (barbarian vs archer)
+- health (max and current)
+- mana (max and current)
+- physical resist (from armor)
+- magic resist (from armor)
+- strength (hit modifier)
+- dexterity (accuracy)
+- agility (move speed)
+- constitution (max hp)
+- focus (needed for higher level spells)
+- will (max mp)
 
 arena:
 - positions of characters
