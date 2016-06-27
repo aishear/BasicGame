@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Andrew on 6/25/2016.
@@ -14,7 +15,7 @@ public class Character implements Mappable {
     private Shield shield;
     private Armor armor;
 
-    private ArrayList<Item> inventory;
+    private List<Item> inventory = new ArrayList<Item>();
 
     private int strength;
     private int dexterity;
@@ -96,30 +97,30 @@ public class Character implements Mappable {
     }
 
     public int getMaxCarryWeight() {
-        return strength * 2;
+        return getStrength() * 2;
     }
 
     public int getMaxHealth() {
-        return 100 + (2 * constitution);
+        return 100 + (2 * getConstitution());
     }
 
     public int getMaxMana() {
-        return willpower * 10;
+        return getWillpower() * 10;
     }
 
     public int getMoveSpeed() {
-        if (agility  < 10) return 1;
-        if (agility > 100) return 10;
-        return agility / 10;
+        if (getAgility()  < 10) return 1;
+        if (getAgility() > 100) return 10;
+        return getAgility() / 10;
     }
 
     public int getPhysicalResist() {
-        //TODO sum resist from armor
+        //TODO sum resist from armor and race bonus
         return 0;
     }
 
     public int getMagicResist() {
-        //TODO sum resist from armor
+        //TODO sum resist from armor and race bonus
         return 0;
     }
 }
