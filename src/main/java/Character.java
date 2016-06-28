@@ -12,8 +12,8 @@ public class Character implements Mappable {
 
     private Weapon primaryWeapon;
     private Weapon secondaryWeapon;
-    private Shield shield;
-    private Armor armor;
+    private Armor shield;
+    private Armor bodyArmor;
 
     private List<Item> inventory = new ArrayList<Item>();
 
@@ -109,18 +109,32 @@ public class Character implements Mappable {
     }
 
     public int getMoveSpeed() {
-        if (getAgility()  < 10) return 1;
+        if (getAgility() < 10) return 1;
         if (getAgility() > 100) return 10;
         return getAgility() / 10;
     }
 
     public int getPhysicalResist() {
         //TODO sum resist from armor and race bonus
-        return 0;
+        int sum = 0;
+        if (bodyArmor != null) {
+            sum += bodyArmor.getPhysicalResist();
+        }
+        if (shield != null) {
+            sum += shield.getPhysicalResist();
+        }
+        return sum;
     }
 
     public int getMagicResist() {
         //TODO sum resist from armor and race bonus
-        return 0;
+        int sum = 0;
+        if (bodyArmor != null) {
+            sum += bodyArmor.getMagicResist();
+        }
+        if (shield != null) {
+            sum += shield.getMagicResist();
+        }
+        return sum;
     }
 }
