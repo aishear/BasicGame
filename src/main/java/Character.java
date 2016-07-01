@@ -10,6 +10,26 @@ public class Character implements Mappable {
     private int health;
     private int mana;
 
+    public Weapon getPrimaryWeapon() {
+        return primaryWeapon;
+    }
+
+    public Weapon getSecondaryWeapon() {
+        return secondaryWeapon;
+    }
+
+    public Armor getShield() {
+        return shield;
+    }
+
+    public Armor getBodyArmor() {
+        return bodyArmor;
+    }
+
+    public List<Item> getInventory() {
+        return inventory;
+    }
+
     private Weapon primaryWeapon;
     private Weapon secondaryWeapon;
     private Armor shield;
@@ -136,5 +156,11 @@ public class Character implements Mappable {
             sum += shield.getMagicResist();
         }
         return sum;
+    }
+
+    public boolean equipPrimaryWeapon(Weapon weapon) {
+        //TODO implement stat requirements
+        primaryWeapon = weapon;
+        return true;
     }
 }
