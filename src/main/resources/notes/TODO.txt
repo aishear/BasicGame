@@ -1,0 +1,5 @@
+implement A* for point to point movement
+- make scenery objects that implement mappable?
+
+implement range check for weapons
+- Bresenham's line algorithm
