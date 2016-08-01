@@ -163,4 +163,12 @@ public class Character implements Mappable {
         primaryWeapon = weapon;
         return true;
     }
+
+    public int getDexAttackBonus() {
+        return (int)((getDexterity() / 10.0) * 3.0);
+    }
+
+    public int getStrengthDamageBonus() {
+        return getStrength() / 10;
+    }
 }

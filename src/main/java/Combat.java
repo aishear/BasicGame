@@ -22,13 +22,18 @@ public class Combat {
     }
 
     public int getAttackAccuracy(Character source, Weapon sourceWeapon) {
-        int accuracy = sourceWeapon.getAccuracy() + (int)((source.getDexterity() / 10.0) * 3.0);
+        int accuracy = sourceWeapon.getAccuracy() + source.getDexAttackBonus();
         if (accuracy > 100) accuracy = 100;
         return accuracy;
     }
 
     public int getAttackDamage(Character source, Weapon sourceWeapon) {
-        return sourceWeapon.getDamage() + (source.getStrength() / 10);
+        // apply strength damage bonus for melee weapons, but not for ranged weapons
+        if (sourceWeapon.getRange() > 1) {
+            return sourceWeapon.getDamage();
+        } else {
+            return sourceWeapon.getDamage() + source.getStrengthDamageBonus();
+        }
     }
 
     /**
